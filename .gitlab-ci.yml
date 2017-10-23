@@ -1,0 +1,61 @@
+stages:
+    - build
+    - deploy
+
+build_web:
+    stage: build
+    image: node:latest
+    variables:
+        BUILD_VERSION: "silver"
+    script:
+        - npm install
+        - npm run build
+    cache:
+        key: node
+        paths:
+            - node_modules/
+    artifacts:
+        paths:
+            - public/*
+    except:
+        - master
+
+build_web_gold:
+    stage: build
+    image: node:latest
+    variables:
+        BUILD_VERSION: "gold"
+    script:
+        - npm install
+        - npm run build
+    cache:
+        key: node
+        paths:
+            - node_modules/
+    artifacts:
+        paths:
+            - public/*
+    only:
+        - master
+
+deploy_web_silver:
+    stage: deploy
+    image: python:latest
+    variables:
+        S3_BUCKET_NAME: "emailsig-dev.sportstech.athletics.illinois.edu"
+    script:
+        - pip install awscli
+        - aws s3 sync public/ s3://$S3_BUCKET_NAME
+    only:
+        - silver
+
+deploy_web_gold:
+    stage: deploy
+    image: python:latest
+    variables:
+        S3_BUCKET_NAME: "emailsignature.fightingillinisportstech.com"
+    script:
+        - pip install awscli
+        - aws s3 sync public/ s3://$S3_BUCKET_NAME
+    only:
+        - master
