@@ -1,11 +1,9 @@
-# illini-email-signatures
+# SafeBet
 
-Email signature generator for Illini staff utilizing **react** and **react-form**
+Website that assists in betting for sports games using **react** and **redux**
 
 ## Getting started
 
 `npm install`
 
 `npm start`
-
-That's it!
