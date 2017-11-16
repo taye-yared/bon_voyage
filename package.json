@@ -19,6 +19,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-form": "^2.0.3",
+    "react-router-dom": "^4.2.2",
     "semantic-ui-react": "^0.75.1"
   },
   "devDependencies": {
