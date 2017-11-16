@@ -1,6 +1,6 @@
-# SafeBet
+# Bon Voyage
 
-Website that assists in betting for sports games using **react** and **redux**
+Website that assists in betting for sports games using **react**
 
 ## Getting started
 
