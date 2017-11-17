@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom'
 
 class App extends React.Component {
     
     render() {
         return (
-            <div>Hello World!</div>
+            <div>
+                <Route path="/" component={null} />
+            </div>
         )
     }
 
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>, document.getElementById('app'));
