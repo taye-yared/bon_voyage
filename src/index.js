@@ -1,20 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch} from 'react-router-dom'
+import MapView from './components/map_view/map_view.js'
 
 class App extends React.Component {
     
     render() {
         return (
-            <div>
-                <Route path="/" component={null} />
-            </div>
+                <BrowserRouter>
+                    <Switch>
+                        <Route path="/map-view" component={MapView} />
+                        <Route path="/signup" component={null}/>
+                        <Route path="/interests" component={null}/>
+                        <Route path="/preferences" component={null}/>
+                        <Route path="/feeling-sponataneous" component={null}/>
+                        <Route path="/" component={null}/>  {/*This would be landing page*/}
+                    </Switch>
+                </BrowserRouter>
         )
     }
 
 }
 
-ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

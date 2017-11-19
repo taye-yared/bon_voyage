@@ -1,3 +1,4 @@
+// This is just a template to copy and paste whenever you need to make a new component
 import React from 'react'
 import {Component} from 'react'
 

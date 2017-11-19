@@ -10,7 +10,8 @@ module.exports = {
         publicPath: '/'
     },
     devServer: {
-        contentBase: './public'
+        contentBase: './public',
+        historyApiFallback: true
     },
     devtool: 'source-map',
     module: {
