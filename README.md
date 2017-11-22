@@ -1,6 +1,6 @@
 # Bon Voyage
 
-Website that assists in betting for sports games using **react**
+Website for travel built using **react**
 
 ## Getting started
 
