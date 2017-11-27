@@ -13,12 +13,12 @@ const style = {
 export default class Map extends React.Component {
     mapDiv;
     map;
+    markers;
     constructor(props) {
         super(props)
         this.loadMap = this.loadMap.bind(this)
         this.renderMarkers = this.renderMarkers.bind(this)
-        this.componentDidUpdate = this.componentDidUpdate.bind(this)
-        this.componentDidMount = this.componentDidMount.bind(this)
+        this.addMarker = this.addMarker.bind(this)
 
         const { lat, lng } = this.props.initialCenter;
         this.state = {
@@ -56,6 +56,25 @@ export default class Map extends React.Component {
         })
     }
 
+    addMarker(lat,lng,title){
+        if(!this.markers) this.markers=[]
+        const { google } = this.props;
+        const maps = google.maps;
+        let marker = new maps.Marker({
+            id: this.markers && this.markers.length ? this.markers.length : 0,
+            position: new maps.LatLng(lat, lng),
+            map: this.map,
+            title: title,
+            animation: google.maps.Animation.DROP
+        });
+        console.log(marker)
+        this.markers.push(marker)
+        //this.markers[marker.__gm_id] = marker
+        // Marker will delete when you right-click it
+        google.maps.event.addListener(marker, "rightclick", (point) => { this.markers[point.id].setMap(null); });
+    }
+    
+
     loadMap() {
         if (this.props && this.props.google) {
             // google is available
@@ -74,30 +93,18 @@ export default class Map extends React.Component {
 
             // Add Markers
             // Miami
-            let marker = new maps.Marker({
-                position: new maps.LatLng(25.795662, -80.286541),
-                map: this.map,
-                title: 'Miami, Florida'
-            });
+            this.addMarker(25.795662, -80.286541, 'Miami, Florida')
             // Paris
-            let marker1 = new maps.Marker({
-                position: new maps.LatLng(48.961154, 2.437088),
-                map: this.map,
-                title: 'Paris, France'
-            });
+            this.addMarker(48.961154, 2.437088, 'Paris, France')
             // Tokyo
-            let marker2 = new maps.Marker({
-                position: new maps.LatLng(35.549149, 139.779914),
-                map: this.map,
-                draggable:true,
-                title: 'Tokyo, Japan'
-            });
+            this.addMarker(35.549149, 139.779914, 'Tokyo, Japan')
 
             // Add Listeners
             this.map.addListener('click', (event) => {
                 var tempMarker = new google.maps.Marker({
                     position: event.latLng,
-                    map: this.map
+                    map: this.map,
+                    animation: google.maps.Animation.DROP
                 });
             })
         }
