@@ -2,7 +2,6 @@
 import React from 'react'
 import {Component} from 'react'
 import {Card, Image, Icon, Divider} from 'semantic-ui-react'
-const miami = require('../../../public/assets/miami.jpg')
 
 const style = {
     width: '24vw',
@@ -28,7 +27,6 @@ export default class MiamiCard extends Component{
         return(
             <div style={style}>
                 <Card>
-                    <Image src={miami} size="medium" />
                     <Card.Content>
                         <Card.Header>Miami</Card.Header>
                         <Card.Meta>Florida</Card.Meta>
@@ -37,7 +35,7 @@ export default class MiamiCard extends Component{
                             and is one of the most popular cities visited by tourists from around the world.  
                         </Card.Description>
                     </Card.Content>
-                    <Card.Content extra style={{overflowY:'scroll', maxHeight:'6.8rem'}}>
+                    <Card.Content extra style={{overflowY:'scroll', maxHeight:'42.5vh'}}>
                         <Card.Content extra>
                             <a>
                                 <Icon name='plane' />
@@ -58,7 +56,29 @@ export default class MiamiCard extends Component{
                                 AA ORD(1:55PM)->MIA(6:08PM)  $210 
                             </a>
                         </Card.Content>
+                        <Divider />
+                        <Card.Content extra>
+                            <a>
+                                <Icon name='plane' />
+                                UA ORD(9:10AM)->MIA(3:57PM)  $66
+                            </a>
+                        </Card.Content>
+                        <Divider />
+                        <Card.Content extra>
+                            <a>
+                                <Icon name='plane' />
+                                UA ORD(7:37AM)->MIA(11:42AM)  $145
+                            </a>
+                        </Card.Content>
+                        <Divider />
+                        <Card.Content extra>
+                            <a>
+                                <Icon name='plane' />
+                                UA ORD(8:37AM)->MIA(12:42PM)  $155
+                            </a>
+                        </Card.Content>
                     </Card.Content>
+                    
                 </Card>
             </div>
         )
