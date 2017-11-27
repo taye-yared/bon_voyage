@@ -14,9 +14,16 @@ export default class Interests extends Component{
         // Function will be called whenever the state or props of this class changes.
         // Never call setState in this function! (Will cause an infinite loop)
         return(
+	<div>
             <div>
-                Hello World!
+               <h1> Interests </h1>
+		<h3> Where would you rather go?! (Click one) </h3>
             </div>
+	    <div>
+
+	    </div>
+	    <button> Finish later </button>
+	</div>
         )
     }
 }
