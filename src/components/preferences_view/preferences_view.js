@@ -12,7 +12,7 @@ export default class PreferencesView extends Component{
     render(){
         return(
             <div>
-                Hello World!
+                test
             </div>
         )
     }
