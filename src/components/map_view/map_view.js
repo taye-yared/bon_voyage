@@ -3,6 +3,7 @@ import {Component} from 'react'
 import MapContainer from './map_container'
 import {Input, Image, Card, Popup} from 'semantic-ui-react' 
 import MiamiCard from './miami_card'
+import Menu from '../common/menu'
 
 const pinImg = require('../../../public/assets/pin.png')
 const miamiImg = require('../../../public/assets/miami.jpg')
@@ -18,6 +19,7 @@ export default class MapView extends React.Component{
         // Never call setState in this function! (Will cause an infinite loop)
         return(
             <div>
+                <Menu />
                 <div id="search-container">
                     <img id='pin-img' src={pinImg} />
                     
