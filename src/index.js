@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom'
 import MapView from './components/map_view/map_view.js'
 import Interests from './components/interests/interests.js'
 import PreferencesView from './components/preferences_view/preferences_view.js'
+import WishListTable from './components/preferences_view/table.js';
 
 class App extends React.Component {
     
