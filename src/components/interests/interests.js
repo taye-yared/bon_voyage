@@ -1,6 +1,7 @@
 import React from 'react'
 import {Component} from 'react'
-import Pics from './activityPics.js'
+import { Button } from 'semantic-ui-react'
+import Pics from './activityPics'
 
 export default class Interests extends Component{
     constructor(props){
@@ -23,7 +24,7 @@ export default class Interests extends Component{
 	    <div>
 		<Pics />
 	    </div>
-	    <button> Finish later </button>
+	    <Button> Finish later </Button>
 	</div>
         )
     }
