@@ -1,5 +1,6 @@
 import React from 'react'
 import {Component} from 'react'
+import Pics from './activityPics.js'
 
 export default class Interests extends Component{
     constructor(props){
@@ -20,7 +21,7 @@ export default class Interests extends Component{
 		<h3> Where would you rather go?! (Click one) </h3>
             </div>
 	    <div>
-
+		<Pics />
 	    </div>
 	    <button> Finish later </button>
 	</div>
