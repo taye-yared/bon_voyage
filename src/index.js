@@ -5,8 +5,12 @@ import MapView from './components/map_view/map_view.js'
 import Interests from './components/interests/interests.js'
 import PreferencesView from './components/preferences_view/preferences_view.js'
 import WishListTable from './components/preferences_view/table.js';
+import Menu from './components/common/menu'
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     
     render() {
         return (
