@@ -5,9 +5,6 @@ import { Avatar, Button, Checkbox, Icon, Table, Input, Label } from 'semantic-ui
 const pic1 = require('./picture0.jpg')
 const pic2 = require('./picture1.jpg')
 
-
-
-
 export default class Template extends Component{
     constructor(props){
         super(props)
@@ -23,6 +20,7 @@ export default class Template extends Component{
         // Never call setState in this function! (Will cause an infinite loop)
         return(
             <div>
+		test
                  <Avatar src={pic1} />
 		 <Avatar src={pic2} />
             </div>
