@@ -21,7 +21,7 @@ export default class WishListTable extends Component {
           <Table.Body>
             <Table.Row>
               <Table.Cell collapsing>
-                <Button icon negative size='tiny'>
+                <Button icon negative size='mini'>
                   <Icon name='close' />
                 </Button>
               </Table.Cell>
