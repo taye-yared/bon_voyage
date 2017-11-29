@@ -6,22 +6,24 @@ import Interests from './components/interests/interests.js'
 import PreferencesView from './components/preferences_view/preferences_view.js'
 import WishListTable from './components/preferences_view/table.js';
 import Menu from './components/common/menu'
+import LandingView from './components/landing_view/landing_view'
+import SignupView from './components/signup_view/signup_view'
 
 class App extends React.Component {
     constructor(props) {
         super(props);
     }
-    
+
     render() {
         return (
                 <BrowserRouter>
                     <Switch>
                         <Route path="/map-view" component={MapView} />
-                        <Route path="/signup" component={null}/>
+                        <Route path="/signup" component={LandingView}/>
                         <Route path="/interests" component={Interests}/>
                         <Route path="/preferences" component={PreferencesView}/>
                         <Route path="/feeling-sponataneous" component={null}/>
-                        <Route path="/" component={null}/>  {/*This would be landing page*/}
+                        <Route path="/" component={SignupView}/>  {/*This would be landing page*/}
                     </Switch>
                 </BrowserRouter>
         )
