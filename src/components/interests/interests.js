@@ -18,14 +18,16 @@ export default class Interests extends Component{
         return(
 	<div>
 	 <Menu />
-            <div>
+            <div align = "center">
                <h1> Interests </h1>
 		<h3> Where would you rather go?! (Click one) </h3>
             </div>
 	    <div>
 		<Pics />
 	    </div>
-	    <Button> Finish later </Button>
+		<div align="center">
+	    <Button > Finish later </Button>
+		</div>
 	</div>
         )
     }
