@@ -32,16 +32,16 @@ export default class GlobeView extends React.Component{
 	                	onSwipedLeft = {this.swipeListener}
 	                	onSwipedRight = {this.swipeListener}
                         mouseSwipe = {true}>
-	                	globeImg
+	                	<img id="globe-img"src={globeImg} />
 	                </Swipe>
 	            </div>
 	            <div>
                 	{this.state.cardToShow != -1 ? 
                         <TravelCard 
-                    		city = {cityData[currentCity][0]}
-                    		state = {cityData[currentCity][1]}
-                    		description = {cityData[currentCity][2]}
-                    		airportCode = {cityData[currentCity][3]}> 
+                    		city = {cityData[this.state.currentCity][0]}
+                    		state = {cityData[this.state.currentCity][1]}
+                    		description = {cityData[this.state.currentCity][2]}
+                    		airportCode = {cityData[this.state.currentCity][3]}> 
                         </TravelCard> : null}
                 </div>
             </div>
