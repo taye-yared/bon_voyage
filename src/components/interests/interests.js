@@ -11,7 +11,9 @@ export default class Interests extends Component{
             // Initialize state here if neded
         }
     }
-
+    finishLaterClick(){
+	window.location="/Preferences"
+    }
     render(){
         // Function will be called whenever the state or props of this class changes.
         // Never call setState in this function! (Will cause an infinite loop)
@@ -26,7 +28,7 @@ export default class Interests extends Component{
 		<Pics />
 	    </div>
 		<div align="center">
-	    <Button > Finish later </Button>
+	    <Button onClick = {this.finishLaterClick}> Finish later </Button>
 		</div>
 	</div>
         )
