@@ -19,11 +19,11 @@ class App extends React.Component {
                 <BrowserRouter>
                     <Switch>
                         <Route path="/map-view" component={MapView} />
-                        <Route path="/signup" component={LandingView}/>
+                        <Route path="/signup" component={SignupView}/>
                         <Route path="/interests" component={Interests}/>
                         <Route path="/preferences" component={PreferencesView}/>
                         <Route path="/feeling-sponataneous" component={null}/>
-                        <Route path="/" component={SignupView}/>  {/*This would be landing page*/}
+                        <Route path="/" component={LandingView}/>  {/*This would be landing page*/}
                     </Switch>
                 </BrowserRouter>
         )
