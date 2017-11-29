@@ -8,6 +8,7 @@ import WishListTable from './components/preferences_view/table.js';
 import Menu from './components/common/menu'
 import LandingView from './components/landing_view/landing_view'
 import SignupView from './components/signup_view/signup_view'
+import GlobeView from './components/globe_view/globe_view'
 
 class App extends React.Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class App extends React.Component {
                         <Route path="/signup" component={LandingView}/>
                         <Route path="/interests" component={Interests}/>
                         <Route path="/preferences" component={PreferencesView}/>
-                        <Route path="/feeling-sponataneous" component={null}/>
+                        <Route path="/feeling-sponataneous" component={GlobeView}/>
                         <Route path="/" component={SignupView}/>  {/*This would be landing page*/}
                     </Switch>
                 </BrowserRouter>
