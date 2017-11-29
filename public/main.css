@@ -78,6 +78,13 @@ body{
    background-repeat: no-repeat;
    background-size: 100% 100%;
  }
+  #landing-wrapper{
+   height: 100%;
+   position: absolute;
+   width: 100%;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+  }
 
  #sign-up-form{
    height: 70vh;
