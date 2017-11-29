@@ -12,7 +12,7 @@ const style = {
     marginLeft: '74vw'
 }
 
-export default class Card extends Component{
+export default class TravelCard extends Component{
     constructor(props){
         super(props)
     }
