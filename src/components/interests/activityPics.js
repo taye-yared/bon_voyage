@@ -64,7 +64,7 @@ export default class Pics extends Component{
 			</p>
 			<div align = "center" style = {{padding:'30px'}}>
 			<Button onClick = {this.tryAgainClick}> Doesn't sound quite right? Try Again. </Button>
-			<Button onClick = {this.finishLaterClick}> Sounds good! Let's move on to your preferences. </Button>
+			<Button onClick = {this.finishLaterClick}> Sounds good! Let's move on to travel preferences. </Button>
 			</div>
 		</Modal>           
 
