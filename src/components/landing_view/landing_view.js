@@ -79,11 +79,11 @@ export default class LandingView extends React.Component{
                 </table>
               </div>
               <div id="buttons" align="center">
-                <Button animated="fade" primary style={{margin:"20px", width:"130px"}} onClick={this.signupClick}>
+                <Button animated="fade" primary style={{margin:"20px", width:"160px"}} onClick={this.signupClick}>
                   <Button.Content visible>Sign Up</Button.Content>
                   <Button.Content hidden>Create an Account</Button.Content>
                 </Button>
-                <Button animated="fade" style={{width:"130px"}} onClick={this.tryClick}>
+                <Button animated="fade" style={{width:"160px"}} onClick={this.tryClick}>
                   <Button.Content visible>Continue as Guest</Button.Content>
                   <Button.Content hidden>Try It Out</Button.Content>
                 </Button>
