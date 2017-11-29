@@ -17,7 +17,7 @@ export default class SignupView extends React.Component{
         // Function will be called whenever the state or props of this class changes.
         // Never call setState in this function! (Will cause an infinite loop)
         return(
-            <div style={{backgroundImage:"url(" + backImg +")"}}>
+            <div id="sign-up-wrapper" style={{backgroundImage:"url(" + backImg +")"}}>
               <div id="title">
                   <a href="https://fontmeme.com/handwriting-fonts/"><img src="https://fontmeme.com/permalink/171128/c3547f750585bfe36d5fc7bed6b6e631.png" border="0"/></a>
               </div>

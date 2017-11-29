@@ -71,6 +71,13 @@ body{
      padding: 0 1rem !important;
      border-radius: 25px;
  }
+ #sign-up-wrapper{
+   height: 100%;
+   position: absolute;
+   width: 100%;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+ }
  /* .main-img{
      flex-grow: 2 !important;
  }
