@@ -21,6 +21,7 @@ export default class MapView extends React.Component{
         this.toggleCard = this.toggleCard.bind(this)
         this.onInputChange = this.onInputChange.bind(this)
         this.areaSearch = this.areaSearch.bind(this)
+        this.onKeyDown = this.onKeyDown.bind(this)
     }
 
     toggleCard(){
@@ -35,8 +36,15 @@ export default class MapView extends React.Component{
         })
     }
 
+    onKeyDown(event){
+        if (event.keyCode == 13) {
+            // Pressed Enter
+            this.areaSearch()
+        }
+    }
+
     areaSearch(){
-        console.log('search clicked')
+        console.log('Enter pressed')
         this.setState({
             addToMap: true
         })
@@ -54,7 +62,7 @@ export default class MapView extends React.Component{
                     <h2 id="drop-me"> Drop Me! </h2>
                     
                     <div id="map-view-input">
-                        <Input icon={<Icon name='search' onClick={this.areaSearch}/>}onChange={this.onInputChange} value={this.state.inputText} size="big" placeholder='Search...'/>
+                        <Input icon={<Icon name='search' />}onKeyDown={this.onKeyDown} onChange={this.onInputChange} value={this.state.inputText} size="big" placeholder='Search...'/>
                     </div>
                 </div>
                 <div style={{display: 'flex'}}>
