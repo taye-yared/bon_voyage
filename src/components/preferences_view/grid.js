@@ -9,6 +9,10 @@ export default class PreferencesGrid extends Component {
         super(props)
     }
 
+    savePreferences() {
+      window.location="/map-view"
+    }
+
     render(){
       return (
         <Grid>
@@ -18,7 +22,7 @@ export default class PreferencesGrid extends Component {
           <Grid.Column width={7}>
             <RightGrid />
           </Grid.Column>
-          <Button content='Save preferences' icon='lock' labelPosition='left' color='green' floated='right'/>
+          <Button content='Save preferences' icon='lock' labelPosition='left' color='green' floated='right' onClick={this.savePreferences}/>
         </Grid>
       )
     }
