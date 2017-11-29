@@ -19,7 +19,7 @@ export default class SignupView extends React.Component{
         return(
             <div id="sign-up-wrapper" style={{backgroundImage:"url(" + backImg +")"}}>
               <div id="title">
-                  <img src="https://fontmeme.com/permalink/171128/c3547f750585bfe36d5fc7bed6b6e631.png" border="0"/>
+                  <img src="https://fontmeme.com/permalink/171129/9950a9730792e7cd820f44ddce6b3363.png" border="0"/>
               </div>
               <div id="signup" style={{margin:"auto", width:"50%"}}>
                 <Form id = "sign-up-form" align="center">

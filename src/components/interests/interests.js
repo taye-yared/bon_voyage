@@ -11,21 +11,25 @@ export default class Interests extends Component{
             // Initialize state here if neded
         }
     }
-
+    finishLaterClick(){
+	window.location="/Preferences"
+    }
     render(){
         // Function will be called whenever the state or props of this class changes.
         // Never call setState in this function! (Will cause an infinite loop)
         return(
 	<div>
 	 <Menu />
-            <div>
+            <div align = "center">
                <h1> Interests </h1>
 		<h3> Where would you rather go?! (Click one) </h3>
             </div>
 	    <div>
 		<Pics />
 	    </div>
-	    <Button> Finish later </Button>
+		<div align="center">
+	    <Button onClick = {this.finishLaterClick}> Finish later </Button>
+		</div>
 	</div>
         )
     }
