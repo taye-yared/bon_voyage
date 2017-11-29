@@ -21,11 +21,11 @@ export default class WishListTable extends Component {
           <Table.Body>
             <Table.Row>
               <Table.Cell collapsing>
-                <Button icon negative size='tiny'>
+                <Button icon negative size='mini'>
                   <Icon name='close' />
                 </Button>
               </Table.Cell>
-              <Table.Cell>Paris</Table.Cell>
+              <Table.Cell>Tokyo</Table.Cell>
               <Table.Cell>1000</Table.Cell>
             </Table.Row>
           </Table.Body>
