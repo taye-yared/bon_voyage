@@ -19,6 +19,7 @@
     "google-maps-react": "^1.1.2",
     "lodash": "^4.17.4",
     "react": "^16.0.0",
+    "react-date-range": "^0.9.4",
     "react-dom": "^16.0.0",
     "react-form": "^2.0.3",
     "react-router-dom": "^4.2.2",
