@@ -37,6 +37,9 @@ export default class Map extends React.Component {
         if (prevProps.google !== this.props.google) {
             this.loadMap();
         }
+        if(prevProps.addToMap === false && this.props.addToMap === true){
+            this.addMarker(50.845616, 4.353104, 'Brussels')
+        }
     }
 
     renderMarkers() {
@@ -67,11 +70,9 @@ export default class Map extends React.Component {
             title: title,
             animation: google.maps.Animation.DROP
         });
-        console.log(marker)
-        this.markers.push(marker)
-        //this.markers[marker.__gm_id] = marker
-        // Marker will delete when you right-click it
-        google.maps.event.addListener(marker, "rightclick", (point) => { this.markers[point.id].setMap(null); });
+        marker.addListener('click', (event) =>{
+            this.props.toggleCard()
+        })
     }
     
 

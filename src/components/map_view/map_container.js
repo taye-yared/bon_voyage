@@ -20,7 +20,7 @@ class MapContainer extends React.Component{
         const pos = {lat:37.854751, lng:-25.834751}
         return (
             <div>
-                <Map google={this.props.google} initialCenter={{lat:37.854751, lng:-25.834751}}>
+                <Map addToMap={this.props.addToMap} toggleCard={this.props.toggleCard} google={this.props.google} initialCenter={{lat:37.854751, lng:-25.834751}}>
                     <Marker position={pos} />
                 </Map>
             </div>

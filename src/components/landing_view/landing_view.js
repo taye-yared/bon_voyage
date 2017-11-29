@@ -84,8 +84,8 @@ export default class LandingView extends React.Component{
                   <Button.Content hidden>Create an Account</Button.Content>
                 </Button>
                 <Button animated="fade" style={{width:"130px"}} onClick={this.tryClick}>
-                  <Button.Content visible>Try It Out</Button.Content>
-                  <Button.Content hidden>Continue as Guest</Button.Content>
+                  <Button.Content visible>Continue as Guest</Button.Content>
+                  <Button.Content hidden>Try It Out</Button.Content>
                 </Button>
               </div>
             </div>
