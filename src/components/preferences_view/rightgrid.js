@@ -15,8 +15,6 @@ export default class RightGrid extends Component {
             <h3> Wish List </h3>
           </Grid.Row>
           <Grid.Row height={60}>
-          </Grid.Row>
-          <Grid.Row height={60}>
             <Input placeholder='Starting point...' />
           </Grid.Row>
           <Grid.Row height={6}>
