@@ -34,7 +34,7 @@ export default class LandingView extends React.Component{
             <div style={{backgroundImage:"url(" + backImg +")"}}>
               <div id="title">
                 <div style={{display:"inline-block"}}>
-                  <a href="https://fontmeme.com/handwriting-fonts/"><img src="https://fontmeme.com/permalink/171128/7b3c958af02e02aab0650a9692875934.png" border="0"/></a>
+                  <img src="https://fontmeme.com/permalink/171128/7b3c958af02e02aab0650a9692875934.png" border="0"/>
                 </div>
                 <div style={{display:"inline-block", float:"right"}}>
                   <Input align="right" size="medium" placeholder='Username' style={{margin:"3px"}}/>
