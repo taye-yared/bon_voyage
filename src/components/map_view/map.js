@@ -84,9 +84,11 @@ export default class Map extends React.Component {
 
             // Add Listeners
             this.map.addListener('click', (event) => {
+                this.props.addRome()
                 var tempMarker = new google.maps.Marker({
                     position: event.latLng,
                     map: this.map,
+                    title: 'Rome',
                     animation: google.maps.Animation.DROP
                 });
             })

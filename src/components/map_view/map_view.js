@@ -11,18 +11,27 @@ const miamiImg = require('../../../public/assets/miami.jpg')
 const parisImg = require('../../../public/assets/paris.jpg')
 const tokyoImg = require('../../../public/assets/tokyo.jpg')
 const brusselsImg = require('../../../public/assets/brussels.jpg')
+const romeImg = require('../../../public/assets/rome.jpg')
 export default class MapView extends React.Component{
     constructor(props){
         super(props)
         this.state={
             showMiami: true,
             inputText: '',
-            addToMap: false
+            addToMap: false,
+            showRome: false
         }
         this.toggleCard = this.toggleCard.bind(this)
         this.onInputChange = this.onInputChange.bind(this)
         this.areaSearch = this.areaSearch.bind(this)
         this.onKeyDown = this.onKeyDown.bind(this)
+        this.addRome = this.addRome.bind(this)
+    }
+
+    addRome(){
+        this.setState({
+            showRome: true
+        })
     }
 
     toggleCard(){
@@ -67,7 +76,7 @@ export default class MapView extends React.Component{
                     </div>
                 </div>
                 <div style={{display: 'flex'}}>
-                    <MapContainer addToMap={this.state.addToMap} toggleCard={this.toggleCard}/>
+                    <MapContainer addRome={this.addRome} addToMap={this.state.addToMap} toggleCard={this.toggleCard}/>
                     {this.state.showMiami ? <MiamiCard /> : <TokyoCard />}
                 </div>
                 <div style={{display: 'flex', position: 'absolute', top:'77vh', width: '100%', justifyContent: 'space-evenly'}}>
@@ -77,6 +86,10 @@ export default class MapView extends React.Component{
                     {
                         this.state.addToMap &&
                         <Popup position='top center' content="Brussels" trigger={<img src={brusselsImg} className='map-view-img sec-img' />} />
+                    }
+                    {
+                        this.state.showRome &&
+                        <Popup position='top center' content="Rome" trigger={<img src={romeImg} className='map-view-img sec-img' />} />
                     }
                 </div>
             </div>
