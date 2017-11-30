@@ -33,48 +33,49 @@ export default class MiamiCard extends Component{
                         <Card.Description>
                             Miami is located on the Atlantic coast of Florida at the southern tip 
                             and is one of the most popular cities visited by tourists from around the world.  
+                            Most arrive at Florida’s busiest airport: Miami International Airport.
                         </Card.Description>
                     </Card.Content>
-                    <Card.Content extra style={{overflowY:'scroll', maxHeight:'42.5vh'}}>
+                    <Card.Content extra style={{overflowY:'scroll', maxHeight:'38.5vh'}}>
                         <Card.Content extra>
-                            <a>
+                            <a href="https://www.aa.com/shopping/chooseFlights?bookingPathStateId=1512009003357-876">
                                 <Icon name='plane' />
-                                AA ORD(5:25AM)->MIA(9:30AM)  $104 
+                                AA ORD(5:25AM)->MIA(9:30AM)  $66 (12/6/2017)
                             </a>
                         </Card.Content>
                         <Divider />
                         <Card.Content extra>
                             <a>
                                 <Icon name='plane' />
-                                AA ORD(7:05AM)->MIA(11:14AM)  $145 
+                                AA ORD(7:05AM)->MIA(11:14AM)  $110 (12/5/2017)
                             </a>
                         </Card.Content>
                         <Divider />
                         <Card.Content extra>
                             <a>
                                 <Icon name='plane' />
-                                AA ORD(1:55PM)->MIA(6:08PM)  $210 
+                                AA ORD(1:55PM)->MIA(6:08PM)  $150 (12/6/2017)
                             </a>
                         </Card.Content>
                         <Divider />
                         <Card.Content extra>
                             <a>
                                 <Icon name='plane' />
-                                UA ORD(9:10AM)->MIA(3:57PM)  $66
+                                UA ORD(9:10AM)->MIA(3:57PM)  $165 (12/6/2017)
                             </a>
                         </Card.Content>
                         <Divider />
                         <Card.Content extra>
                             <a>
                                 <Icon name='plane' />
-                                UA ORD(7:37AM)->MIA(11:42AM)  $145
+                                UA ORD(7:37AM)->MIA(11:42AM)  $200 (12/6/2017)
                             </a>
                         </Card.Content>
                         <Divider />
                         <Card.Content extra>
                             <a>
                                 <Icon name='plane' />
-                                UA ORD(8:37AM)->MIA(12:42PM)  $155
+                                UA ORD(8:37AM)->MIA(12:42PM)  $812 (12/22/2017)
                             </a>
                         </Card.Content>
                     </Card.Content>
