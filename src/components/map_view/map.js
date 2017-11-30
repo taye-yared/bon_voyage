@@ -17,7 +17,6 @@ export default class Map extends React.Component {
     constructor(props) {
         super(props)
         this.loadMap = this.loadMap.bind(this)
-        this.renderMarkers = this.renderMarkers.bind(this)
         this.addMarker = this.addMarker.bind(this)
 
         const { lat, lng } = this.props.initialCenter;
@@ -40,23 +39,6 @@ export default class Map extends React.Component {
         if(prevProps.addToMap === false && this.props.addToMap === true){
             this.addMarker(50.845616, 4.353104, 'Brussels')
         }
-    }
-
-    renderMarkers() {
-        const { children } = this.props;
-
-        if (!children) {
-            console.log("There are no children")
-            return;
-        }
-
-        return React.Children.map(children, c => {
-            return React.cloneElement(c, {
-                map: this.map,
-                google: this.props.google,
-                mapCenter: this.state.currentLocation
-            });
-        })
     }
 
     addMarker(lat,lng,title){
@@ -120,7 +102,6 @@ export default class Map extends React.Component {
         return (
             <div style={style} ref={(mapDiv) => { this.mapDiv = mapDiv; }} onMouseUp={this.onMouseUp}>
                 Loading map...
-                {this.renderMarkers()}
             </div>
         )
     }

@@ -10,6 +10,7 @@ const pinImg = require('../../../public/assets/pin.png')
 const miamiImg = require('../../../public/assets/miami.jpg')
 const parisImg = require('../../../public/assets/paris.jpg')
 const tokyoImg = require('../../../public/assets/tokyo.jpg')
+const brusselsImg = require('../../../public/assets/brussels.jpg')
 export default class MapView extends React.Component{
     constructor(props){
         super(props)
@@ -73,6 +74,10 @@ export default class MapView extends React.Component{
                     <Popup position='top center' content="Paris" trigger={<img src={parisImg} className='map-view-img sec-img' />} />
                     <Popup position='top center' content="Miami" trigger={<img src={miamiImg} className='map-view-img main-img' />} />
                     <Popup position='top center' content="Tokyo" trigger={<img src={tokyoImg} className='map-view-img sec-img' />} />
+                    {
+                        this.state.addToMap &&
+                        <Popup position='top center' content="Brussels" trigger={<img src={brusselsImg} className='map-view-img sec-img' />} />
+                    }
                 </div>
             </div>
         )
