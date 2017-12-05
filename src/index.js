@@ -24,7 +24,7 @@ class App extends React.Component {
                         <Route path="/interests" component={Interests}/>
                         <Route path="/preferences" component={PreferencesView}/>
                         <Route path="/feeling-sponataneous" component={GlobeView}/>
-                        <Route path="/" component={SignupView}/>  {/*This would be landing page*/}
+                        <Route path="/" component={LandingView}/>  {/*This would be landing page*/}
                     </Switch>
                 </BrowserRouter>
         )
