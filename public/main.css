@@ -52,7 +52,7 @@ body{
     background: antiquewhite;
 }
  #map-view-input{
-    margin-left: 30%;
+    margin-left: 53%;
  }
  #search-container{
      display: flex;
@@ -96,9 +96,38 @@ body{
      height: 700px;
      margin-left: 7%;
  }
- /* .main-img{
-     flex-grow: 2 !important;
- }
- .sec-img{
-     flex-grow: 1 !important;
- } */
+#flight-toggle-wrapper{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+#flight_arrow{
+    margin: 0 10px;
+}
+#airline_img{
+    margin-right: 5rem;
+}
+#airline_price{
+    font-size: xx-large;
+}
+#icon_wrapper{
+    margin-right: 3rem;
+}
+#price_wrapper{
+    justify-content: flex-end;
+}
+#savings_wrapper{
+    margin-top: 1rem;
+    color: #4BB543;
+}
+#table_wrapper{
+    padding-top: 2rem;
+    width: 85%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#flight_row:hover{
+    cursor: pointer;
+}

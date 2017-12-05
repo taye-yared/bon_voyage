@@ -36,50 +36,6 @@ export default class MiamiCard extends Component{
                         for its towering gate and surrounding woods.  
                         </Card.Description>
                     </Card.Content>
-                    <Card.Content extra style={{overflowY:'scroll', maxHeight:'38.5vh'}}>
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                AA ORD(5:25AM)->TYO(9:30AM)  $1066 (12/6/2017)
-                            </a>
-                        </Card.Content>
-                        <Divider />
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                AA ORD(7:05AM)->TYO(11:14AM)  $1110 (12/6/2017)
-                            </a>
-                        </Card.Content>
-                        <Divider />
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                AA ORD(1:55PM)->TYO(6:08PM)  $1150 (12/6/2017)
-                            </a>
-                        </Card.Content>
-                        <Divider />
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                UA ORD(9:10AM)->TYO(3:57PM)  $1165 (12/6/2017)
-                            </a>
-                        </Card.Content>
-                        <Divider />
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                UA ORD(7:37AM)->TYO(11:42AM)  $1200 (12/6/2017)
-                            </a>
-                        </Card.Content>
-                        <Divider />
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                UA ORD(8:37AM)->TYO(12:42PM)  $1212 (12/6/2017)
-                            </a>
-                        </Card.Content>
-                    </Card.Content>
-                    
                 </Card>
             </div>
         )

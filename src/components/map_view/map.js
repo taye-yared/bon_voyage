@@ -37,7 +37,7 @@ export default class Map extends React.Component {
             this.loadMap();
         }
         if(prevProps.addToMap === false && this.props.addToMap === true){
-            this.addMarker(50.845616, 4.353104, 'Brussels')
+            this.addMarker(39.736803, -104.952623, 'Denver, Colorado')
         }
     }
 
@@ -75,20 +75,18 @@ export default class Map extends React.Component {
             this.map = new maps.Map(this.mapDiv, mapConfig);
 
             // Add Markers
+            // Morocco
+            this.addMarker(31.441182, -6.500734, 'Morocco')
             // Miami
-            this.addMarker(25.795662, -80.286541, 'Miami, Florida')
-            // Paris
-            this.addMarker(48.961154, 2.437088, 'Paris, France')
-            // Tokyo
-            this.addMarker(35.549149, 139.779914, 'Tokyo, Japan')
+            this.addMarker(25.776826, -80.211265, 'Miami')
 
             // Add Listeners
             this.map.addListener('click', (event) => {
                 this.props.addRome()
                 var tempMarker = new google.maps.Marker({
-                    position: event.latLng,
+                    position: new maps.LatLng(20.781009, -156.317227),//event.latLng,
                     map: this.map,
-                    title: 'Rome',
+                    title: 'Maui, Hawaii',
                     animation: google.maps.Animation.DROP
                 });
             })

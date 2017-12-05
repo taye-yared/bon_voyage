@@ -36,50 +36,6 @@ export default class MiamiCard extends Component{
                             Most arrive at Florida’s busiest airport: Miami International Airport.
                         </Card.Description>
                     </Card.Content>
-                    <Card.Content extra style={{overflowY:'scroll', maxHeight:'38.5vh'}}>
-                        <Card.Content extra>
-                            <a href="https://www.aa.com/shopping/chooseFlights?bookingPathStateId=1512009003357-876">
-                                <Icon name='plane' />
-                                AA ORD(5:25AM)->MIA(9:30AM)  $66 (12/6/2017)
-                            </a>
-                        </Card.Content>
-                        <Divider />
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                AA ORD(7:05AM)->MIA(11:14AM)  $110 (12/5/2017)
-                            </a>
-                        </Card.Content>
-                        <Divider />
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                AA ORD(1:55PM)->MIA(6:08PM)  $150 (12/6/2017)
-                            </a>
-                        </Card.Content>
-                        <Divider />
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                UA ORD(9:10AM)->MIA(3:57PM)  $165 (12/6/2017)
-                            </a>
-                        </Card.Content>
-                        <Divider />
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                UA ORD(7:37AM)->MIA(11:42AM)  $200 (12/6/2017)
-                            </a>
-                        </Card.Content>
-                        <Divider />
-                        <Card.Content extra>
-                            <a>
-                                <Icon name='plane' />
-                                UA ORD(8:37AM)->MIA(12:42PM)  $812 (12/22/2017)
-                            </a>
-                        </Card.Content>
-                    </Card.Content>
-                    
                 </Card>
             </div>
         )
