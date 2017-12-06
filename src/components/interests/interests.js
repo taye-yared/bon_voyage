@@ -3,12 +3,15 @@ import {Component} from 'react'
 import { Button } from 'semantic-ui-react'
 import Pics from './activityPics'
 import Menu from '../common/menu'
+import GlobeView from '../globe_view/globe_view'
+import SignupView from '../signup_view/signup_view'
 export default class Interests extends Component{
     constructor(props){
         super(props)
 
         this.state={
             // Initialize state here if neded
+            weather:0
         }
     }
     finishLaterClick(){
@@ -25,7 +28,7 @@ export default class Interests extends Component{
 		<h3> Where would you rather go?! (Click one) </h3>
             </div>
 	    <div>
-		<Pics />
+		<Pics/>
 	    </div>
 		<div align="right">
 	    <Button color='black' style = {{marginRight:'135px'}} onClick = {this.finishLaterClick}> Finish later </Button>

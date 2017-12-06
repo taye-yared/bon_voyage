@@ -1,6 +1,6 @@
 import React from 'react'
 import {Component} from 'react'
-import { Button, Icon} from 'semantic-ui-react' 
+import { Button, Icon} from 'semantic-ui-react'
 
 export default class MyMenu extends Component{
     constructor(props){
@@ -26,7 +26,7 @@ export default class MyMenu extends Component{
         document.getElementById("mySidenav").style.width = "0";
     }
 
-    
+
 
     render(){
         return(
@@ -39,10 +39,10 @@ export default class MyMenu extends Component{
                     <a href="/Interests">Interests</a>
                     <a href="/">Logout</a>
                   </div>
-                  
-                  <Button 
+
+                  <Button
                     icon={<Icon name='content' size='big' color='black'/>}
-                    size='large' 
+                    size='large'
                     style={{backgroundColor: 'transparent'}}
                     onClick={this.onToggleMenu}/>
             </div>

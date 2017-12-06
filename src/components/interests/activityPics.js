@@ -21,7 +21,6 @@ export default class Pics extends Component{
             // Initialize state here if neded
  		picA: pic1, picB: pic2, counter:0, modalIsOpen: false, rButtonText : 'Next'
         }
-
 	this.toggleIconA = this.toggleIconA.bind(this);
   this.toggleIconB = this.toggleIconB.bind(this);
   this.backClick = this.backClick.bind(this);
@@ -68,10 +67,14 @@ export default class Pics extends Component{
    }
 
     toggleIconA(){
+<<<<<<< Updated upstream
       a.style.border="2px solid black"
       if(this.weather == 0){
         a.style.border="5px solid green"
       }
+=======
+      a.style.border="2px solid blue"
+>>>>>>> Stashed changes
     }
     toggleIconB(){
       b.style.border="2px solid black"
@@ -86,7 +89,11 @@ export default class Pics extends Component{
 			<h1> {this.state.counter+1}/3 </h1>
       <Button.Group>
         <Button disabled={this.state.counter == 0} attached='left' id="backbtn" color='black' labelPosition='left' icon='left chevron' content='Back' onClick= {this.backClick}/>
+<<<<<<< Updated upstream
         <Button attached='right'id="nextbtn" labelPosition='right' icon='right chevron' color='black' content={this.state.rButtonText} onClick={this.nextClick}/>
+=======
+        <Button disabled={this.props.weatherState == 0} attached='right'id="nextbtn" labelPosition='right' icon='right chevron' color='black'content='Next' onClick={this.nextClick}/>
+>>>>>>> Stashed changes
       </Button.Group>
 		<Modal open={this.state.modalIsOpen}>
 			<h1 align = "center" style = {{padding:'20px'}}> Interests Summary </h1>

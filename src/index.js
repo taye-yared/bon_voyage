@@ -13,20 +13,28 @@ import GlobeView from './components/globe_view/globe_view'
 class App extends React.Component {
     constructor(props) {
         super(props);
+        this.state={
+          weather:0
+        }
     }
 
     render() {
         return (
+            <div>
+
                 <BrowserRouter>
                     <Switch>
                         <Route path="/map-view" component={MapView} />
-                        <Route path="/signup" component={SignupView}/>
+                        <Route path="/signup" render={(props) => (
+                          <SignupView weatherState={this.state.weather}/>
+                        )}/>
                         <Route path="/interests" component={Interests}/>
                         <Route path="/preferences" component={PreferencesView}/>
                         <Route path="/feeling-sponataneous" component={GlobeView}/>
                         <Route path="/" component={LandingView}/>  {/*This would be landing page*/}
                     </Switch>
                 </BrowserRouter>
+            </div>
         )
     }
 
