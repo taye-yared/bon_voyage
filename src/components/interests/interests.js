@@ -28,7 +28,7 @@ export default class Interests extends Component{
 		<Pics />
 	    </div>
 		<div align="right">
-	    <Button color='black' onClick = {this.finishLaterClick}> Finish later </Button>
+	    <Button color='black' style = {{marginRight:'135px'}} onClick = {this.finishLaterClick}> Finish later </Button>
 		</div>
 	</div>
         )
