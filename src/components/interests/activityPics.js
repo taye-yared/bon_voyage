@@ -68,6 +68,7 @@ export default class Pics extends Component{
    }
 
     toggleIconA(){
+      b.style.border=""
       a.style.border="2px solid black"
       if(this.state.counter == 0){
         this.props.updateWeather(0);
@@ -82,6 +83,7 @@ export default class Pics extends Component{
     }
 
     toggleIconB() {
+      a.style.border=""
       b.style.border="2px solid black"
       if(this.state.counter == 0){
         this.props.updateWeather(1);
