@@ -94,8 +94,13 @@ body{
   justify-content: space-around;
  }
  #globe-img{
-     height: 700px;
-     margin-left: 7%;
+     height: 600px;
+     margin-left: 17%;
+ }
+ #travelCardCityImage{
+    height: 300px;
+    width: 263px;
+    padding-bottom: 8px;
  }
  .menu-item:hover{
     cursor: pointer;
