@@ -2,12 +2,12 @@
 import React from 'react'
 import {Component} from 'react'
 import { Image, Button, Icon, Input, Label, Modal } from 'semantic-ui-react'
-import pic3 from './picture2.jpg';
+import pic3 from './picture5.jpg';
 import pic4 from './picture3.jpg';
 const pic1 = require('./picture0.jpg')
 const pic2 = require('./picture1.jpg')
 import pic5 from './picture4.jpg';
-import pic6 from './picture5.jpg';
+import pic6 from './picture6.jpg';
 import pic7 from './picture6.jpg';
 import pic8 from './picture7.jpg';
 import pic9 from './picture8.jpg';
@@ -19,7 +19,7 @@ export default class Pics extends Component{
 
         this.state={
             // Initialize state here if neded
- 		picA: pic1, picB: pic2, counter:0, modalIsOpen: false
+ 		picA: pic1, picB: pic2, counter:0, modalIsOpen: false, rButtonText : 'Next'
         }
 
 	this.toggleIconA = this.toggleIconA.bind(this);
@@ -40,10 +40,10 @@ export default class Pics extends Component{
      a.style.border="none";
      b.style.border="none";
    	if (this.state.counter == 1){
-                   this.setState({picA: pic1, picB: pic2, counter: this.state.counter-1});
+                   this.setState({picA: pic1, picB: pic2, counter: this.state.counter-1, rButtonText : 'Next'});
            }
    	else if (this.state.counter == 2){
-                   this.setState({picA: pic3, picB: pic4, counter: this.state.counter-1});
+                   this.setState({picA: pic3, picB: pic4, counter: this.state.counter-1, rButtonText : 'Next'});
            }
    	else if (this.state.counter == 3){
                    this.setState({picA: pic5, counter: this.state.counter-1, picB: pic6});
@@ -60,27 +60,21 @@ export default class Pics extends Component{
    		this.setState({picA: pic3, picB: pic4, counter: this.state.counter+1});
    	}
    	else if (this.state.counter == 1){
-                   this.setState({picA: pic5, picB: pic6, counter: this.state.counter+1});
+                   this.setState({picA: pic5, picB: pic6, counter: this.state.counter+1, rButtonText: "Complete"});
            }
    	else if (this.state.counter == 2){
-                   this.setState({picA: pic7, counter: this.state.counter+1, picB: pic8});
+                   this.setState({modalIsOpen: true});
            }
-   	else if (this.state.counter == 3){
-                   this.setState({picA: pic9, picB: pic10, counter: this.state.counter+1});
-           }
-   	else if (this.state.counter == 4) {
-   		this.setState({modalIsOpen: true, counter:this.state.counter+1});
-   	}
    }
 
     toggleIconA(){
-      a.style.border="2px solid blue"
+      a.style.border="2px solid black"
       if(this.weather == 0){
         a.style.border="5px solid green"
       }
     }
     toggleIconB(){
-      b.style.border="2px solid blue"
+      b.style.border="2px solid black"
     }
     render(){
         // Function will be called whenever the state or props of this class changes.
@@ -89,10 +83,10 @@ export default class Pics extends Component{
             <div align = "center" >
 		 <img id='a' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picA} onClick={this.toggleIconA} />
 		<img id='b' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picB}  onClick={this.toggleIconB}/>
-			<h1> {this.state.counter}/5 </h1>
+			<h1> {this.state.counter+1}/3 </h1>
       <Button.Group>
         <Button disabled={this.state.counter == 0} attached='left' id="backbtn" color='black' labelPosition='left' icon='left chevron' content='Back' onClick= {this.backClick}/>
-        <Button attached='right'id="nextbtn" labelPosition='right' icon='right chevron' color='black' content='Next' onClick={this.nextClick}/>
+        <Button attached='right'id="nextbtn" labelPosition='right' icon='right chevron' color='black' content={this.state.rButtonText} onClick={this.nextClick}/>
       </Button.Group>
 		<Modal open={this.state.modalIsOpen}>
 			<h1 align = "center" style = {{padding:'20px'}}> Interests Summary </h1>
