@@ -20,6 +20,7 @@ export default class Pics extends Component{
         this.state={
             // Initialize state here if neded
  		picA: pic1, picB: pic2, counter:0, modalIsOpen: false, rButtonText : 'Next'
+
         }
 	this.toggleIconA = this.toggleIconA.bind(this);
   this.toggleIconB = this.toggleIconB.bind(this);
