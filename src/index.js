@@ -14,8 +14,26 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-          weather:0
+          weather:-1,
+          activity:-1,
+          region:-1
         }
+        this.updateWeather=this.updateWeather.bind(this)
+        this.updateActivity=this.updateActivity.bind(this)
+        this.updateRegion=this.updateRegion.bind(this)
+    }
+
+    updateWeather(newWeather){
+      newWeather.preventDefault();
+      this.setState(weather:newWeather)
+    }
+    updateActivity(newActivity){
+      newActivity.preventDefault();
+      this.setState(activity:newActivity)
+    }
+    updateRegion(newRegion){
+      newRegion.preventDefault();
+      this.setState(region:newRegion)
     }
 
     render() {
@@ -26,11 +44,15 @@ class App extends React.Component {
                     <Switch>
                         <Route path="/map-view" component={MapView} />
                         <Route path="/signup" render={(props) => (
-                          <SignupView weatherState={this.state.weather}/>
+                          <SignupView weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
                         )}/>
-                        <Route path="/interests" component={Interests}/>
+                        <Route path="/interests" render={(props) => (
+                          <Interests weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
+                        )}/>
                         <Route path="/preferences" component={PreferencesView}/>
-                        <Route path="/feeling-sponataneous" component={GlobeView}/>
+                        <Route path="/feeling-sponataneous" render={(props) => (
+                          <GlobeView weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
+                        )}/>
                         <Route path="/" component={LandingView}/>  {/*This would be landing page*/}
                     </Switch>
                 </BrowserRouter>

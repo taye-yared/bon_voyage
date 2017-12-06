@@ -68,23 +68,36 @@ export default class Pics extends Component{
    }
 
     toggleIconA(){
-
       a.style.border="2px solid black"
-      if(this.weather == 0){
-        a.style.border="5px solid green"
+      if(this.state.counter == 0){
+        this.props.updateWeather(0);
       }
-
-      a.style.border="2px solid blue"
-
+      else if(this.state.counter == 1){
+        this.props.updateRegion(0);
+      }
+      else if(this.state.counter == 2){
+        this.props.updateActivity(0);
+      }
     }
+
     toggleIconB(){
       b.style.border="2px solid black"
+      if(this.state.counter == 0){
+        this.props.updateWeather(1);
+      }
+      else if(this.state.counter == 1){
+        this.props.updateRegion(1);
+      }
+      else if(this.state.counter == 2){
+        this.props.updateActivity(1);
+      }
     }
     render(){
         // Function will be called whenever the state or props of this class changes.
         // Never call setState in this function! (Will cause an infinite loop)
         return(
             <div align = "center" >
+            <h1>{this.props.weatherState}</h1>
 		 <img id='a' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picA} onClick={this.toggleIconA} />
 		<img id='b' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picB}  onClick={this.toggleIconB}/>
 			<h1> {this.state.counter+1}/3 </h1>

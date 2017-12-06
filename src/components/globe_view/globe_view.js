@@ -29,6 +29,7 @@ export default class GlobeView extends React.Component{
     		<div>
                 <Menu />
                 <div>
+                  <h1>{this.props.weatherState}</h1>
 	                <Swipe
 	                	onSwipedLeft = {this.swipeListener}
 	                	onSwipedRight = {this.swipeListener}
