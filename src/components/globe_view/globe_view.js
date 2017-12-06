@@ -41,7 +41,7 @@ const json = {
       "activities": ["Sightseeing national parks", "Surfing", "Polynesian Hula dancing", "Snorkeling", "Whale watching", "Golf"]
     },
     {
-      "city": "Marrakesh",
+      "city": "Marrakech",
       "state": "Morocco",
       "warm": true,
       "active": false,
@@ -107,8 +107,8 @@ export default class GlobeView extends React.Component{
             warm : this.props.weatherState,
             active : this.props.activityState,
             urban : this.props.regionState,
-            city : "miami",
-            state : "florida",
+            city : "",
+            state : "",
             custom_description : "",
             activities : "",
             reason : ""
@@ -119,36 +119,43 @@ export default class GlobeView extends React.Component{
         var reason = "";
         var characteristic = Math.floor(Math.random()*3);
         var i;
+        console.log(this.state.warm)
         for(i = 0; i < json["city_list"].length; i++) {
             var currentCity = json["city_list"][i];
             if(characteristic === 0) {
-                if(this.state.warm === true)
+                if(this.state.warm === 1)
                     reason = "This location was selected due to your preference for warm weather";
-                if(this.state.warm === false)
+                if(this.state.warm === 0)
                     reason = "This location was selected due to your preference for cold weather";
-                if(this.state.warm === currentCity["warm"])
+                if(this.state.warm === -1)
+                    reason = "Please update your interests for more personalized suggestions!"  
+                if(this.state.warm === currentCity["warm"] || this.state.warm === -1)
                     matchingPlaces.push(currentCity)
             }
             if(characteristic === 1) {
-                if(this.state.active === true)
+                if(this.state.active === 1)
                     reason = "This location was selected due to your preference for active trips";
-                if(this.state.active === false)
+                if(this.state.active === 0)
                     reason = "This location was selected due to your preference for leisurely trips";
-                if(this.state.active === currentCity["active"])
+                if(this.state.active === -1)
+                    reason = "Please update your interests for more personalized suggestions!"  
+                if(this.state.active === currentCity["active"] || this.state.active === -1)
                     matchingPlaces.push(currentCity)
             }
             if(characteristic === 2) {
-                if(this.state.urban === true)
+                if(this.state.urban === 1)
                     reason = "This location was selected due to your preference for urban environments";
-                if(this.state.urban === false)
+                if(this.state.urban === 0)
                     reason = "This location was selected due to your preference for rustic rural environments";
-                if(this.state.urban === currentCity["urban"])
+                if(this.state.urban === -1)
+                    reason = "Please update your interests for more personalized suggestions!"  
+                if(this.state.urban === currentCity["urban"] || this.state.urban === -1)
                     matchingPlaces.push(currentCity)
             }
         }
+
         var randomCityIndex = Math.floor(Math.random()*(matchingPlaces.length))
         var randomCity = matchingPlaces[randomCityIndex];
-        console.log(randomCity)
         var activities = "Activities include ";
         for(i = 0; i < randomCity["activities"].length; i++) {
             activities += randomCity["activities"][i] + ", ";
@@ -177,14 +184,14 @@ export default class GlobeView extends React.Component{
                     </Swipe>
                 </div>
                 <div>
-                    <TravelCard 
+                    {this.state.city !== "" && <TravelCard 
                         city = {this.state.city}
                         state = {this.state.state}
                         custom_description = {this.state.custom_description}
                         activities = {this.state.activities}
                         reason = {this.state.reason}
                         > 
-                    </TravelCard>
+                    </TravelCard>}
                 </div>
             </div>
     	)
