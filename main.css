@@ -1,0 +1,153 @@
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+body{
+    background: antiquewhite;
+}
+ #map-view-input{
+    margin-left: 58%;
+    margin-top: 1rem;
+ }
+ #search-container{
+     display: flex;
+     align-items: center;
+ }
+ #pin-img{
+     width: 3rem;
+     height: 5rem;
+     margin-left: 7%;
+ }
+ #drop-me{
+    margin-left: 1rem;
+ }
+ .map-view-img{
+     height: 21vh !important;
+     padding: 0 1rem !important;
+     border-radius: 25px;
+ }
+ #sign-up-wrapper{
+   height: 100%;
+   position: absolute;
+   width: 100%;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+ }
+  #landing-wrapper{
+   height: 100%;
+   position: absolute;
+   width: 100%;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+  }
+
+ #sign-up-form{
+   height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ }
+ #globe-img{
+     height: 600px;
+     margin-left: 17%;
+ }
+ #travelCardCityImage{
+    height: 300px;
+    width: 263px;
+    padding-bottom: 8px;
+ }
+ .menu-item:hover{
+    cursor: pointer;
+ }
+ /* .main-img{
+     flex-grow: 2 !important;
+ }
+ .sec-img{
+     flex-grow: 1 !important;
+ } */
+#flight-toggle-wrapper{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+#flight_arrow{
+    margin: 0 10px;
+}
+#airline_img{
+    margin-right: 5rem;
+}
+#airline_price{
+    font-size: xx-large;
+}
+#icon_wrapper{
+    margin-right: 3rem;
+}
+#price_wrapper{
+    justify-content: flex-end;
+}
+#savings_wrapper{
+    margin-top: 1rem;
+    color: #4BB543;
+}
+#table_wrapper{
+    padding-top: 2rem;
+    width: 85%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#flight_row:hover{
+    cursor: pointer;
+}
+#activity_header{
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+}
