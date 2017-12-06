@@ -44,7 +44,7 @@ export default class SignupView extends React.Component{
                   </Form.Group>
                   <Form.Checkbox label = "Send me Email notifications"/>
                   <Form.Checkbox label = "Send me Text notifications"/>
-                  <Button primary disabled={this.props.weatherState == 1} onClick={this.submitClick}>Submit</Button>
+                  <Button primary onClick={this.submitClick}>Submit</Button>
                 </Form>
               </div>
             </div>

@@ -40,9 +40,7 @@ class App extends React.Component {
                 <BrowserRouter>
                     <Switch>
                         <Route path="/map-view" component={MapView} />
-                        <Route path="/signup" render={(props) => (
-                          <SignupView {...props} weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
-                        )}/>
+                        <Route path="/signup" component={SignupView}
                         <Route path="/interests" render={(props) => (
                           <Interests {...props} weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
                         )}/>
