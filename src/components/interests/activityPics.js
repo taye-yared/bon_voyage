@@ -17,13 +17,17 @@ export default class Pics extends Component{
     constructor(props){
         super(props)
 
-        this.state={		
+        this.state={
             // Initialize state here if neded
  		picA: pic1, picB: pic2, counter:0, modalIsOpen: false
         }
-	this.toggleIcon = this.toggleIcon.bind(this);
+
+	this.toggleIconA = this.toggleIconA.bind(this);
+  this.toggleIconB = this.toggleIconB.bind(this);
+  this.backClick = this.backClick.bind(this);
+  this.nextClick = this.nextClick.bind(this);
     }
-   
+
     finishLaterClick(){
         window.location="/Preferences"
     }
@@ -32,41 +36,73 @@ export default class Pics extends Component{
         window.location="/interests"
     }
 
-    toggleIcon(){
-	if (this.state.counter == 0){
-		this.setState({picA: pic3, picB: pic4, counter: this.state.counter+1});
-	}
-	else if (this.state.counter == 1){
-                this.setState({picA: pic5, picB: pic6, counter: this.state.counter+1});
-        }
-	else if (this.state.counter == 2){
-                this.setState({picA: pic7, counter: this.state.counter+1, picB: pic8});
-        }
-	else if (this.state.counter == 3){
-                this.setState({picA: pic9, picB: pic10, counter: this.state.counter+1});
-        }
-	else if (this.state.counter == 4) {
-		this.setState({modalIsOpen: true, counter:this.state.counter+1});		
-	}	
-    }
+   backClick(){
+     a.style.border="none";
+     b.style.border="none";
+   	if (this.state.counter == 1){
+                   this.setState({picA: pic1, picB: pic2, counter: this.state.counter-1});
+           }
+   	else if (this.state.counter == 2){
+                   this.setState({picA: pic3, picB: pic4, counter: this.state.counter-1});
+           }
+   	else if (this.state.counter == 3){
+                   this.setState({picA: pic5, counter: this.state.counter-1, picB: pic6});
+           }
+   	else if (this.state.counter == 4) {
+   		this.setState({picA: pic7, picB: pic8, counter: this.state.counter-1});
+   	}
+   }
 
+   nextClick(){
+     a.style.border="none";
+     b.style.border="none";
+     if (this.state.counter == 0){
+   		this.setState({picA: pic3, picB: pic4, counter: this.state.counter+1});
+   	}
+   	else if (this.state.counter == 1){
+                   this.setState({picA: pic5, picB: pic6, counter: this.state.counter+1});
+           }
+   	else if (this.state.counter == 2){
+                   this.setState({picA: pic7, counter: this.state.counter+1, picB: pic8});
+           }
+   	else if (this.state.counter == 3){
+                   this.setState({picA: pic9, picB: pic10, counter: this.state.counter+1});
+           }
+   	else if (this.state.counter == 4) {
+   		this.setState({modalIsOpen: true, counter:this.state.counter+1});
+   	}
+   }
+
+    toggleIconA(){
+      a.style.border="2px solid blue"
+      if(this.weather == 0){
+        a.style.border="5px solid green"
+      }
+    }
+    toggleIconB(){
+      b.style.border="2px solid blue"
+    }
     render(){
         // Function will be called whenever the state or props of this class changes.
         // Never call setState in this function! (Will cause an infinite loop)
         return(
-            <div align = "center" onClick={this.toggleIcon} >
-		 <img style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picA} />	
-		<img style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picB}  /> 		
+            <div align = "center" >
+		 <img id='a' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picA} onClick={this.toggleIconA} />
+		<img id='b' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picB}  onClick={this.toggleIconB}/>
 			<h1> {this.state.counter}/5 </h1>
+      <Button.Group>
+        <Button disabled={this.state.counter == 0} attached='left' id="backbtn" color='black' labelPosition='left' icon='left chevron' content='Back' onClick= {this.backClick}/>
+        <Button attached='right'id="nextbtn" labelPosition='right' icon='right chevron' color='black' content='Next' onClick={this.nextClick}/>
+      </Button.Group>
 		<Modal open={this.state.modalIsOpen}>
 			<h1 align = "center" style = {{padding:'20px'}}> Interests Summary </h1>
-			<p style={{padding:'20px'}}> Based on your selections, it seems like you love adventure! You are free-spirited and enjoy trying new things. You are also active and outdoorsy. We think you'd enjoy visiting places with beautiful natural landscapes where you can kayak, hike, and more! We'll keep your interests in mind when picking suggested destinations for you - check those out on the "Feeling Spontaneous" page.      
+			<p style={{padding:'20px'}}> Based on your selections, it seems like you love adventure! You are free-spirited and enjoy trying new things. You are also active and outdoorsy. We think you'd enjoy visiting places with beautiful natural landscapes where you can kayak, hike, and more! We'll keep your interests in mind when picking suggested destinations for you - check those out on the "Feeling Spontaneous" page.
 			</p>
 			<div align = "center" style = {{padding:'30px'}}>
 			<Button onClick = {this.tryAgainClick}> Doesn't sound quite right? Try Again. </Button>
 			<Button onClick = {this.finishLaterClick}> Sounds good! Let's move on to travel preferences. </Button>
 			</div>
-		</Modal>           
+		</Modal>
 
 	    </div>
         )
