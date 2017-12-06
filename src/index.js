@@ -48,7 +48,7 @@ class App extends React.Component {
                         )}/>
                         <Route path="/preferences" component={PreferencesView}/>
                         <Route path="/feeling-sponataneous" render={(props) => (
-                          <GlobeView {...props}weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
+                          <GlobeView {...props} weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
                         )}/>
                         <Route path="/" component={LandingView}/>  {/*This would be landing page*/}
                     </Switch>
