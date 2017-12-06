@@ -71,6 +71,7 @@ export default class Pics extends Component{
       a.style.border="2px solid black"
       if(this.state.counter == 0){
         this.props.updateWeather(0);
+	 
       }
       else if(this.state.counter == 1){
         this.props.updateRegion(0);
@@ -80,7 +81,7 @@ export default class Pics extends Component{
       }
     }
 
-    toggleIconB(){
+    toggleIconB() {
       b.style.border="2px solid black"
       if(this.state.counter == 0){
         this.props.updateWeather(1);
@@ -97,7 +98,7 @@ export default class Pics extends Component{
         // Never call setState in this function! (Will cause an infinite loop)
         return(
             <div align = "center" >
-            <h1>{this.props.weatherState}</h1>
+     //       <h1>{this.props.weatherState}</h1>
 		 <img id='a' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picA} onClick={this.toggleIconA} />
 		<img id='b' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picB}  onClick={this.toggleIconB}/>
 			<h1> {this.state.counter+1}/3 </h1>
@@ -107,7 +108,7 @@ export default class Pics extends Component{
       </Button.Group>
 		<Modal open={this.state.modalIsOpen}>
 			<h1 align = "center" style = {{padding:'20px'}}> Interests Summary </h1>
-			<p style={{padding:'20px'}}> Based on your selections, it seems like you love adventure! You are free-spirited and enjoy trying new things. You are also active and outdoorsy. We think you'd enjoy visiting places with beautiful natural landscapes where you can kayak, hike, and more! We'll keep your interests in mind when picking suggested destinations for you - check those out on the "Feeling Spontaneous" page.
+			<p style={{padding:'20px'}}> Based on your selections, it seems like you love adventure! You are free-spirited and enjoy trying new things. We'll keep your interests in mind when picking suggested destinations for you - check those out on the "Feeling Spontaneous" page.
 			</p>
 			<div align = "center" style = {{padding:'30px'}}>
 			<Button onClick = {this.tryAgainClick}> Doesn't sound quite right? Try Again. </Button>
@@ -118,4 +119,3 @@ export default class Pics extends Component{
 	    </div>
         )
     }
-}
