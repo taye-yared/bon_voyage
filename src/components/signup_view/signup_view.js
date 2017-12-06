@@ -11,7 +11,7 @@ export default class SignupView extends React.Component{
         this.submitClick = this.submitClick.bind(this)
     }
     submitClick(){
-      window.location="/interests"
+      this.props.history.push("/interests")
     }
     render(){
         // Function will be called whenever the state or props of this class changes.
@@ -44,7 +44,7 @@ export default class SignupView extends React.Component{
                   </Form.Group>
                   <Form.Checkbox label = "Send me Email notifications"/>
                   <Form.Checkbox label = "Send me Text notifications"/>
-                  <Button primary onClick={this.submitClick}>Submit</Button>
+                  <Button primary disabled={this.props.weatherState == 1} onClick={this.submitClick}>Submit</Button>
                 </Form>
               </div>
             </div>

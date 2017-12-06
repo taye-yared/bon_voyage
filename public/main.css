@@ -96,6 +96,9 @@ body{
      height: 700px;
      margin-left: 7%;
  }
+ .menu-item:hover{
+    cursor: pointer;
+ }
  /* .main-img{
      flex-grow: 2 !important;
  }

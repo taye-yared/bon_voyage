@@ -12,12 +12,13 @@ const cityData = [["Miami", "Florida", "A land of sunshine, mystery and oranges"
         ["Angkor Wat", "Cambodia", "Travel back in time to the age of ancient Oriental emperors and golden palaces","REP"]]
 
 export default class GlobeView extends React.Component{
-	
+
     constructor(props){
         super(props)
         this.swipeListener = this.swipeListener.bind(this)
         this.state = {
-        	currentCity : 0
+        	currentCity : 0,
+          weather:1
         }
     }
     swipeListener() {
@@ -26,8 +27,9 @@ export default class GlobeView extends React.Component{
     render() {
     	return(
     		<div>
-                <Menu />
+                <Menu history={this.props.history}/>
                 <div>
+                  <h1>{this.props.weatherState}</h1>
 	                <Swipe
 	                	onSwipedLeft = {this.swipeListener}
 	                	onSwipedRight = {this.swipeListener}
@@ -36,12 +38,12 @@ export default class GlobeView extends React.Component{
 	                </Swipe>
 	            </div>
 	            <div>
-                	{this.state.cardToShow != -1 ? 
-                        <TravelCard 
+                	{this.state.cardToShow != -1 ?
+                        <TravelCard
                     		city = {cityData[this.state.currentCity][0]}
                     		state = {cityData[this.state.currentCity][1]}
                     		description = {cityData[this.state.currentCity][2]}
-                    		airportCode = {cityData[this.state.currentCity][3]}> 
+                    		airportCode = {cityData[this.state.currentCity][3]}>
                         </TravelCard> : null}
                 </div>
             </div>
