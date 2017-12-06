@@ -67,17 +67,29 @@ export default class Pics extends Component{
    }
 
     toggleIconA(){
-
       a.style.border="2px solid black"
-      if(this.weather == 0){
-        a.style.border="5px solid green"
+      if(this.state.counter == 0){
+        updateWeather(0);
       }
-
-      a.style.border="2px solid blue"
-
+      else if(this.state.counter == 1){
+        updateRegion(0);
+      }
+      else if(this.state.counter == 2){
+        updateActivity(0);
+      }
     }
+
     toggleIconB(){
       b.style.border="2px solid black"
+      if(this.state.counter == 0){
+        updateWeather(1);
+      }
+      else if(this.state.counter == 1){
+        updateRegion(1);
+      }
+      else if(this.state.counter == 2){
+        updateActivity(1);
+      }
     }
     render(){
         // Function will be called whenever the state or props of this class changes.

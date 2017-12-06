@@ -11,7 +11,6 @@ export default class Interests extends Component{
 
         this.state={
             // Initialize state here if neded
-            weather:0
         }
     }
     finishLaterClick(){
@@ -28,7 +27,7 @@ export default class Interests extends Component{
 		<h3> Where would you rather go?! (Click one) </h3>
             </div>
 	    <div>
-		<Pics/>
+		<Pics weatherState={this.props.weatherState} activityState={this.props.activityState} regionState={this.props.regionState} updateWeather={this.props.updateWeather} updateActivity={this.props.updateActivity} updateRegion={this.props.updateRegion}/>
 	    </div>
 		<div align="right">
 	    <Button color='black' style = {{marginRight:'135px'}} onClick = {this.finishLaterClick}> Finish later </Button>
