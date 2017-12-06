@@ -98,7 +98,6 @@ export default class Pics extends Component{
         // Never call setState in this function! (Will cause an infinite loop)
         return(
             <div align = "center" >
-     //       <h1>{this.props.weatherState}</h1>
 		 <img id='a' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picA} onClick={this.toggleIconA} />
 		<img id='b' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picB}  onClick={this.toggleIconB}/>
 			<h1> {this.state.counter+1}/3 </h1>
@@ -119,3 +118,4 @@ export default class Pics extends Component{
 	    </div>
         )
     }
+}
