@@ -3,7 +3,7 @@ import {Component} from 'react'
 import Swipe from 'react-swipe-component'
 import Menu from '../common/menu'
 import TravelCard from './travel_card'
-import CityData from './city_data.json';
+
 const globeImg = require('./globe.jpg')
 const json = {
   "city_list" : [
@@ -107,8 +107,8 @@ export default class GlobeView extends React.Component{
             warm : this.props.weatherState,
             active : this.props.activityState,
             urban : this.props.regionState,
-            city : "",
-            state : "",
+            city : "miami",
+            state : "florida",
             custom_description : "",
             activities : "",
             reason : ""
