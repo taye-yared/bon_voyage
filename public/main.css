@@ -52,7 +52,8 @@ body{
     background: antiquewhite;
 }
  #map-view-input{
-    margin-left: 53%;
+    margin-left: 58%;
+    margin-top: 1rem;
  }
  #search-container{
      display: flex;
@@ -130,4 +131,9 @@ body{
 }
 #flight_row:hover{
     cursor: pointer;
+}
+#activity_header{
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
 }

@@ -12,7 +12,7 @@ const style = {
     marginLeft: '74vw'
 }
 
-export default class MiamiCard extends Component{
+export default class MarrakeshCard extends Component{
     constructor(props){
         super(props)
 
@@ -28,24 +28,25 @@ export default class MiamiCard extends Component{
             <div style={style}>
                 <Card>
                     <Card.Content>
-                        <Card.Header>Miami</Card.Header>
-                        <Card.Meta>Florida</Card.Meta>
+                        <Card.Header>Marrakesh</Card.Header>
+                        <Card.Meta>Morocco</Card.Meta>
                         <Card.Description>
-                        The international port city of Miami is located on the Atlantic coast of Florida 
-                        and is one of the top tourist spots in the U.S. Miami offers various tourist stops 
-                        ranging from beaches like Miami Beach and South Beach where tourist can enjoy the 
-                        subtropical weather, to the Art Deco District and Little Havana and Calle Ocho where 
-                        tourists can appreciate the city’s history and Cuban influenced culture.
+                        The fourth largest city in Morocco, the warm city of Marrakesh is one with a rich 
+                        history and is a prominent cultural, religious, and trading centre in northern Africa. 
+                        To fully experience and appreciate its culture, a trip to Marrakesh’s medina and perusal 
+                        of the various marketplaces or souks are a must for any traveller who wants to make the most 
+                        of their trip.  
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
                         <ul>
                             <h4 id="activity_header">Activities</h4>
-                            <li>Clubbing</li>
-                            <li>Skydiving</li>
-                            <li>Deep sea fishing</li>
-                            <li>Snorkeling</li>
-                            <li>Sailing</li>
+                            <li>Sightseeing</li>
+                            <li>Shopping</li>
+                            <li>Tour Museums</li>
+                            <li>Camel Riding</li>
+                            <li>Quad Biking</li>
+                            <li>Hot Air Balloon Rides/Tours</li>
                         </ul>
                     </Card.Content>
                 </Card>
