@@ -104,9 +104,9 @@ export default class GlobeView extends React.Component{
         super(props)
         this.swipeListener = this.swipeListener.bind(this)
         this.state = {
-            warm : true,
-            active : true,
-            urban : true,
+            warm : this.props.weatherState,
+            active : this.props.activityState,
+            urban : this.props.regionState,
             city : "",
             state : "",
             custom_description : "",
