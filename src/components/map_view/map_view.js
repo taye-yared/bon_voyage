@@ -65,7 +65,7 @@ export default class MapView extends React.Component{
         // Never call setState in this function! (Will cause an infinite loop)
         return(
             <div>
-                <Menu />
+                <Menu history={this.props.history} />
                 <div id="search-container">
                     <img id='pin-img' src={pinImg} />
                     

@@ -14,11 +14,11 @@ export default class PreferencesView extends Component {
     render(){
         return (
             <div className="PreferencesView">
-            <Menu />
+            <Menu history={this.props.history}/>
                 <div class="ui container">
                     <h1> Preferences </h1>
                     <div>
-                        <PreferencesGrid />
+                        <PreferencesGrid history={this.props.history}/>
                     </div>
                 </div>
             </div>

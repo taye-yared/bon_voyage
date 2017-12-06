@@ -17,23 +17,27 @@ export default class Pics extends Component{
     constructor(props){
         super(props)
 
-        this.state={
+      this.state={
             // Initialize state here if neded
- 		picA: pic1, picB: pic2, counter:0, modalIsOpen: false, rButtonText : 'Next'
-
-        }
-	this.toggleIconA = this.toggleIconA.bind(this);
-  this.toggleIconB = this.toggleIconB.bind(this);
-  this.backClick = this.backClick.bind(this);
-  this.nextClick = this.nextClick.bind(this);
+        picA: pic1, picB: pic2, counter:0, modalIsOpen: false, rButtonText : 'Next'
+      }
+      this.toggleIconA = this.toggleIconA.bind(this);
+      this.toggleIconB = this.toggleIconB.bind(this);
+      this.backClick = this.backClick.bind(this);
+      this.nextClick = this.nextClick.bind(this);
+      this.finishLaterClick = this.finishLaterClick.bind(this)
+      this.tryAgainClick = this.tryAgainClick.bind(this)
     }
 
     finishLaterClick(){
-        window.location="/Preferences"
+        this.props.history.push("/Preferences")
     }
 
    tryAgainClick(){
-        window.location="/interests"
+        this.props.history.push("/interests")
+        this.setState({
+          picA: pic1, picB: pic2, counter:0, modalIsOpen: false, rButtonText : 'Next'
+        })
     }
 
    backClick(){
@@ -100,8 +104,8 @@ export default class Pics extends Component{
         // Never call setState in this function! (Will cause an infinite loop)
         return(
             <div align = "center" >
-		 <img id='a' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picA} onClick={this.toggleIconA} />
-		<img id='b' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picB}  onClick={this.toggleIconB}/>
+		 <img className="menu-item" id='a' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picA} onClick={this.toggleIconA} />
+		<img className="menu-item" id='b' style={{width: '600px', height: '400px', padding:'20px', borderRadius: '30px'}} src={this.state.picB}  onClick={this.toggleIconB}/>
 			<h1> {this.state.counter+1}/3 </h1>
       <Button.Group>
         <Button disabled={this.state.counter == 0} attached='left' id="backbtn" color='black' labelPosition='left' icon='left chevron' content='Back' onClick= {this.backClick}/>

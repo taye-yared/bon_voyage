@@ -27,7 +27,7 @@ export default class GlobeView extends React.Component{
     render() {
     	return(
     		<div>
-                <Menu />
+                <Menu history={this.props.history}/>
                 <div>
                   <h1>{this.props.weatherState}</h1>
 	                <Swipe

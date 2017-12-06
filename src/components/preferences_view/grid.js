@@ -7,10 +7,11 @@ import RightGrid from './rightgrid.js';
 export default class PreferencesGrid extends Component {
     constructor(props){
         super(props)
+        this.savePreferences = this.savePreferences.bind(this)
     }
 
     savePreferences() {
-      window.location="/map-view"
+      this.props.history.push("/map-view")
     }
 
     render(){

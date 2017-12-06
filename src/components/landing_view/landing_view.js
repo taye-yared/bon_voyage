@@ -19,13 +19,13 @@ export default class LandingView extends React.Component{
         this.tryClick = this.tryClick.bind(this)
     }
     loginClick(){
-      window.location="/map-view"
+      this.props.history.push("/map-view")
     }
     signupClick(){
-      window.location="/signup"
+      this.props.history.push("/signup")
     }
     tryClick(){
-      window.location="/interests"
+      this.props.history.push("/interests")
     }
     render(){
         // Function will be called whenever the state or props of this class changes.

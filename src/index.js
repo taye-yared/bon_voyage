@@ -41,14 +41,14 @@ class App extends React.Component {
                     <Switch>
                         <Route path="/map-view" component={MapView} />
                         <Route path="/signup" render={(props) => (
-                          <SignupView weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
+                          <SignupView {...props} weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
                         )}/>
                         <Route path="/interests" render={(props) => (
-                          <Interests weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
+                          <Interests {...props} weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
                         )}/>
                         <Route path="/preferences" component={PreferencesView}/>
                         <Route path="/feeling-sponataneous" render={(props) => (
-                          <GlobeView weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
+                          <GlobeView {...props}weatherState={this.state.weather} activityState={this.state.activity} regionState={this.state.region} updateWeather={this.updateWeather} updateActivity={this.updateActivity} updateRegion={this.updateRegion}/>
                         )}/>
                         <Route path="/" component={LandingView}/>  {/*This would be landing page*/}
                     </Switch>
