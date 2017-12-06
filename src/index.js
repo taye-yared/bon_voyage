@@ -18,15 +18,21 @@ class App extends React.Component {
           activity:-1,
           region:-1
         }
+        this.updateWeather=this.updateWeather.bind(this)
+        this.updateActivity=this.updateActivity.bind(this)
+        this.updateRegion=this.updateRegion.bind(this)
     }
 
     updateWeather(newWeather){
+      newWeather.preventDefault();
       this.setState(weather:newWeather)
     }
     updateActivity(newActivity){
+      newActivity.preventDefault();
       this.setState(activity:newActivity)
     }
     updateRegion(newRegion){
+      newRegion.preventDefault();
       this.setState(region:newRegion)
     }
 
