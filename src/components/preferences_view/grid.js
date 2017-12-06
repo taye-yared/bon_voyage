@@ -19,10 +19,10 @@ export default class PreferencesGrid extends Component {
       return (
         <Grid>
           <Grid.Column width={9}>
-            <LeftGrid />
+            <LeftGrid {...this.props}/>
           </Grid.Column>
           <Grid.Column width={7}>
-            <RightGrid />
+            <RightGrid {...this.props}/>
           </Grid.Column>
         </Grid>
       )

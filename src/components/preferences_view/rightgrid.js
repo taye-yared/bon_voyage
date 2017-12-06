@@ -13,10 +13,11 @@ export default class RightGrid extends Component {
         this.state = {isOpen: false}
         this.handleOpen = this.handleOpen.bind(this);
         this.handleClose = this.handleClose.bind(this);
+        this.savePreferences = this.savePreferences.bind(this)
     }
 
     savePreferences() {
-      window.location="/map-view"
+      this.props.history.push("/map-view")
     }
 
     handleOpen() {

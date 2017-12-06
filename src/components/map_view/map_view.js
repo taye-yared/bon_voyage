@@ -99,7 +99,7 @@ export default class MapView extends React.Component{
         // Never call setState in this function! (Will cause an infinite loop)
         return(
             <div>
-                <Menu />
+                <Menu history={this.props.history}/>
                 <div id="flight-toggle-wrapper">
                     <Button.Group>
                         <Button onClick={this.onMapClick} positive={this.state.onMap}>Map</Button>
